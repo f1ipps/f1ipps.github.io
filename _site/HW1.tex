@@ -1,0 +1,615 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={HW 1},
+  pdfauthor={SDS 322E},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{HW 1}
+\author{SDS 322E}
+\date{September 02, 2022}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+Felipe Dantas, EID fwd229
+
+\textbf{Please submit as an HTML file on Canvas before the due date}
+
+\emph{For all questions, include the R commands/functions that you used
+to find your answer. Answers without supporting code will not receive
+credit.}
+
+\hypertarget{how-to-submit-this-assignment}{%
+\subparagraph{How to submit this
+assignment}\label{how-to-submit-this-assignment}}
+
+\begin{quote}
+All homework assignments will be completed using R Markdown. These
+\texttt{.Rmd} files consist of text/syntax (formatted using Markdown)
+alongside embedded R code. When you have completed the assignment (by
+adding R code inside codeblocks and supporting text outside codeblocks),
+create your document as follows:
+\end{quote}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  Click the ``Knit'' button (above)
+\item
+  Fix any errors in your code, if applicable
+\item
+  Upload the HTML file to Canvas
+\end{itemize}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{q1-1-pts}{%
+\subsection{Q1 (1 pts)}\label{q1-1-pts}}
+
+\hypertarget{the-dataset-quakes-contains-information-about-earthquakes-occurring-near-fiji-since-1964.-the-first-few-observations-are-listed-below.}{%
+\subparagraph{\texorpdfstring{The dataset \texttt{quakes} contains
+information about earthquakes occurring near Fiji since 1964. The first
+few observations are listed
+below.}{The dataset quakes contains information about earthquakes occurring near Fiji since 1964. The first few observations are listed below.}}\label{the-dataset-quakes-contains-information-about-earthquakes-occurring-near-fiji-since-1964.-the-first-few-observations-are-listed-below.}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(quakes)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##      lat   long depth mag stations
+## 1 -20.42 181.62   562 4.8       41
+## 2 -20.62 181.03   650 4.2       15
+## 3 -26.00 184.10    42 5.4       43
+## 4 -17.97 181.66   626 4.1       19
+## 5 -20.42 181.96   649 4.0       11
+## 6 -19.68 184.31   195 4.0       12
+\end{verbatim}
+
+\hypertarget{how-many-observations-are-there-of-each-variable-i.e.-how-many-rows-are-there-show-using-code-how-many-variables-are-there-total-i.e.-how-many-columns-are-in-the-dataset-you-can-read-more-about-the-dataset-here-do-not-forget-to-include-the-code-you-used-to-find-the-answer-each-question}{%
+\subparagraph{\texorpdfstring{How many observations are there of each
+variable (i.e., how many rows are there; show using code)? How many
+variables are there total (i.e., how many columns are in the dataset)?
+You can read more about the dataset
+\href{https://stat.ethz.ch/R-manual/R-patched/library/datasets/html/quakes.html}{here}
+\emph{Do not forget to include the code you used to find the answer each
+question}}{How many observations are there of each variable (i.e., how many rows are there; show using code)? How many variables are there total (i.e., how many columns are in the dataset)? You can read more about the dataset here Do not forget to include the code you used to find the answer each question}}\label{how-many-observations-are-there-of-each-variable-i.e.-how-many-rows-are-there-show-using-code-how-many-variables-are-there-total-i.e.-how-many-columns-are-in-the-dataset-you-can-read-more-about-the-dataset-here-do-not-forget-to-include-the-code-you-used-to-find-the-answer-each-question}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# number of rows}
+\FunctionTok{print}\NormalTok{(}\FunctionTok{nrow}\NormalTok{(quakes))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1000
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(}\FunctionTok{ncol}\NormalTok{(quakes))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 5
+\end{verbatim}
+
+There are 1000 observations of each variable and there are 5 variables.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{q2-2-pts}{%
+\subsection{Q2 (2 pts)}\label{q2-2-pts}}
+
+\hypertarget{what-are-the-minimum-maximum-mean-and-median-values-for-the-variables-mag-and-depth-note-that-there-are-many-functions-that-can-be-used-to-answer-this-question.-if-you-chose-to-work-with-each-variable-separately-recall-that-you-can-access-individual-variables-in-a-dataframe-using-the-operator-e.g.-datasetvariable.-describe-your-answer-in-words.}{%
+\subparagraph{\texorpdfstring{What are the minimum, maximum, mean, and
+median values for the variables \texttt{mag} and \texttt{depth}? Note
+that there are many functions that can be used to answer this question.
+If you chose to work with each variable separately, recall that you can
+access individual variables in a dataframe using the \texttt{\$}
+operator (e.g., \texttt{dataset\$variable}). Describe your answer in
+words.}{What are the minimum, maximum, mean, and median values for the variables mag and depth? Note that there are many functions that can be used to answer this question. If you chose to work with each variable separately, recall that you can access individual variables in a dataframe using the \$ operator (e.g., dataset\$variable). Describe your answer in words.}}\label{what-are-the-minimum-maximum-mean-and-median-values-for-the-variables-mag-and-depth-note-that-there-are-many-functions-that-can-be-used-to-answer-this-question.-if-you-chose-to-work-with-each-variable-separately-recall-that-you-can-access-individual-variables-in-a-dataframe-using-the-operator-e.g.-datasetvariable.-describe-your-answer-in-words.}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(}\FunctionTok{min}\NormalTok{(quakes}\SpecialCharTok{$}\NormalTok{mag))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(}\FunctionTok{max}\NormalTok{(quakes}\SpecialCharTok{$}\NormalTok{mag))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 6.4
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(}\FunctionTok{median}\NormalTok{(quakes}\SpecialCharTok{$}\NormalTok{mag))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4.6
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(}\FunctionTok{min}\NormalTok{(quakes}\SpecialCharTok{$}\NormalTok{depth))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 40
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(}\FunctionTok{max}\NormalTok{(quakes}\SpecialCharTok{$}\NormalTok{depth))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 680
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(}\FunctionTok{median}\NormalTok{(quakes}\SpecialCharTok{$}\NormalTok{depth))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 247
+\end{verbatim}
+
+The minimum, maximum, and median quake magnitudes are 4.0, 6.4, and 4.6
+magnitudes, respectively. The minimum, maximum, and median quake depths
+are 40, 680, and 247 kilometers, respectively.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{q3}{%
+\subsection{Q3}\label{q3}}
+
+\hypertarget{recall-how-logical-indexing-of-a-dataframe-works-in-r.-to-refresh-your-memory-in-the-example-code-below-i-ask-r-for-the-median-magnitude-for-quakes-whose-longitude-is-greater-than-175.-the-two-ways-produce-equivalent-results.}{%
+\subparagraph{Recall how logical indexing of a dataframe works in R. To
+refresh your memory, in the example code below I ask R for the median
+magnitude for quakes whose longitude is greater than 175. The two ways
+produce equivalent
+results.}\label{recall-how-logical-indexing-of-a-dataframe-works-in-r.-to-refresh-your-memory-in-the-example-code-below-i-ask-r-for-the-median-magnitude-for-quakes-whose-longitude-is-greater-than-175.-the-two-ways-produce-equivalent-results.}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{median}\NormalTok{(quakes}\SpecialCharTok{$}\NormalTok{mag[quakes}\SpecialCharTok{$}\NormalTok{long }\SpecialCharTok{\textgreater{}} \DecValTok{175}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4.5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{median}\NormalTok{(quakes[quakes}\SpecialCharTok{$}\NormalTok{long }\SpecialCharTok{\textgreater{}} \DecValTok{175}\NormalTok{, ]}\SpecialCharTok{$}\NormalTok{mag)  }\CommentTok{\#this is the more conventional notation}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4.5
+\end{verbatim}
+
+\hypertarget{pt}{%
+\subsubsection{3.1 (1 pt)}\label{pt}}
+
+\hypertarget{explain-what-each-of-the-two-lines-of-code-are-doing-in-words.-specifically-why-do-we-need-to-use-the-comma-in-the-second-case-but-not-in-the-first-remember-that-the-selects-a-single-variable-and-that-are-used-for-indexing-whatever-object-came-before-either-a-single-variable-or-a-dataframe.}{%
+\subparagraph{\texorpdfstring{Explain what each of the two lines of code
+are doing in words. Specifically, why do we need to use the comma in the
+second case but not in the first? Remember that the \texttt{\$} selects
+a single variable and that \texttt{{[}\ {]}} are used for indexing
+whatever object came before (either a single variable or a
+dataframe).}{Explain what each of the two lines of code are doing in words. Specifically, why do we need to use the comma in the second case but not in the first? Remember that the \$ selects a single variable and that {[} {]} are used for indexing whatever object came before (either a single variable or a dataframe).}}\label{explain-what-each-of-the-two-lines-of-code-are-doing-in-words.-specifically-why-do-we-need-to-use-the-comma-in-the-second-case-but-not-in-the-first-remember-that-the-selects-a-single-variable-and-that-are-used-for-indexing-whatever-object-came-before-either-a-single-variable-or-a-dataframe.}}
+
+The first line of code is asking what the median ``mag'' value is for
+all quakes rows which have a ``long'' column value greater than 175. It
+does this by subsetting the quakes\$mag vector for just those which have
+the right quake value. As we're subsetting a vector, we do not have to
+specify a column. The second line of code produces the same result, but
+it does this by first indexing the quakes dataset for the rows which
+have an equivalent ``long'' column value of 175, then accessing this new
+data frame for all mag values, which it then takes the median of. The
+comma is necessary as we are indexing a data frame to produce a new data
+frame, rather than simply subsetting a vector as was done in the first
+line of code.
+
+\hypertarget{pts}{%
+\subsubsection{3.2 (3 pts)}\label{pts}}
+
+\hypertarget{what-is-the-mean-of-the-variable-mag-when-depth-is-greater-than-the-median-depth-what-is-the-mean-of-the-variable-mag-when-depth-is-less-than-the-median-depth-what-does-this-suggest-about-the-relationship-between-an-earthquakes-depth-and-its-magnitude}{%
+\subparagraph{\texorpdfstring{What is the mean of the variable
+\texttt{mag} when \texttt{depth} is \emph{greater than} the median
+depth? What is the mean of the variable \texttt{mag} when \texttt{depth}
+is \emph{less than} the median depth? What does this suggest about the
+relationship between an earthquake's depth and its
+magnitude?}{What is the mean of the variable mag when depth is greater than the median depth? What is the mean of the variable mag when depth is less than the median depth? What does this suggest about the relationship between an earthquake's depth and its magnitude?}}\label{what-is-the-mean-of-the-variable-mag-when-depth-is-greater-than-the-median-depth-what-is-the-mean-of-the-variable-mag-when-depth-is-less-than-the-median-depth-what-does-this-suggest-about-the-relationship-between-an-earthquakes-depth-and-its-magnitude}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{mean}\NormalTok{(quakes[quakes}\SpecialCharTok{$}\NormalTok{depth }\SpecialCharTok{\textgreater{}} \FunctionTok{median}\NormalTok{(quakes}\SpecialCharTok{$}\NormalTok{depth), ]}\SpecialCharTok{$}\NormalTok{mag)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4.5232
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{mean}\NormalTok{(quakes[quakes}\SpecialCharTok{$}\NormalTok{depth }\SpecialCharTok{\textless{}} \FunctionTok{median}\NormalTok{(quakes}\SpecialCharTok{$}\NormalTok{depth), ]}\SpecialCharTok{$}\NormalTok{mag)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4.7176
+\end{verbatim}
+
+The mean of ``mag'' when depth is above median value is 4.5232
+magnitudes, while the mean of ``mag'' when depth is below median value
+is 4.7176. This suggests that magnitude and depth are inversely
+correlated, as lower depth values seem to produce higher magnitudes, and
+vice-versa.
+
+\hypertarget{pts-1}{%
+\subsubsection{3.3 (2 pts)}\label{pts-1}}
+
+\hypertarget{what-is-the-standard-deviation-of-the-variable-lat-when-depth-is-greater-than-the-median-depth-what-is-the-standard-deviation-of-the-variable-lat-when-depth-is-less-than-the-median-depth-what-does-this-suggest-about-the-relationship-between-an-earthquakes-latitude-and-its-depth}{%
+\subparagraph{\texorpdfstring{What is the standard deviation of the
+variable \texttt{lat} when \texttt{depth} is \emph{greater than} the
+median depth? What is the standard deviation of the variable
+\texttt{lat} when \texttt{depth} is \emph{less than} the median depth?
+What does this suggest about the relationship between an earthquake's
+latitude and it's
+depth?}{What is the standard deviation of the variable lat when depth is greater than the median depth? What is the standard deviation of the variable lat when depth is less than the median depth? What does this suggest about the relationship between an earthquake's latitude and it's depth?}}\label{what-is-the-standard-deviation-of-the-variable-lat-when-depth-is-greater-than-the-median-depth-what-is-the-standard-deviation-of-the-variable-lat-when-depth-is-less-than-the-median-depth-what-does-this-suggest-about-the-relationship-between-an-earthquakes-latitude-and-its-depth}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sd}\NormalTok{(quakes[quakes}\SpecialCharTok{$}\NormalTok{depth }\SpecialCharTok{\textgreater{}} \FunctionTok{median}\NormalTok{(quakes}\SpecialCharTok{$}\NormalTok{depth), ]}\SpecialCharTok{$}\NormalTok{lat)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 3.577252
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sd}\NormalTok{(quakes[quakes}\SpecialCharTok{$}\NormalTok{depth }\SpecialCharTok{\textless{}} \FunctionTok{median}\NormalTok{(quakes}\SpecialCharTok{$}\NormalTok{depth), ]}\SpecialCharTok{$}\NormalTok{lat)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 6.1501
+\end{verbatim}
+
+The standard deviation of ``lat'' when depth is above median value is
+3.5773º, while the standard deviation of ``lat'' when depth is below
+median value is 6.1501º. This suggests that lower-depth earthquakes have
+a weaker correlation with latitude than higher-depth earthquakes. In
+other words, higher-depth earthquakes must be more common in certain
+latitudes than lower-depth earthquakes.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{q4-2-pts}{%
+\subsection{Q4 (2 pts)}\label{q4-2-pts}}
+
+\hypertarget{the-variable-depth-is-measured-in-kilometers.-create-a-new-variable-called-depth_m-that-gives-depth-in-meters-rather-than-kilometers-and-add-it-to-the-dataset-quakes.-to-help-get-you-started-i-have-given-you-code-that-creates-the-new-variable-but-fills-it-with-na-values.-overwrite-the-nas-below-by-writing-code-on-the-right-hand-side-of-the-assignment-operator---that-computes-the-requested-transformation.-print-out-the-first-few-rows-of-the-updated-dataset-using-head.}{%
+\subparagraph{\texorpdfstring{The variable \texttt{depth} is measured in
+kilometers. Create a new variable called \texttt{depth\_m} that gives
+depth \textbf{in meters rather than kilometers} and add it to the
+dataset \texttt{quakes}. To help get you started, I have given you code
+that creates the new variable but fills it with \texttt{NA} values.
+Overwrite the \texttt{NA}s below by writing code on the right-hand side
+of the assignment operator (\texttt{\textless{}-}) that computes the
+requested transformation. Print out the first few rows of the updated
+dataset using
+\texttt{head()}.}{The variable depth is measured in kilometers. Create a new variable called depth\_m that gives depth in meters rather than kilometers and add it to the dataset quakes. To help get you started, I have given you code that creates the new variable but fills it with NA values. Overwrite the NAs below by writing code on the right-hand side of the assignment operator (\textless-) that computes the requested transformation. Print out the first few rows of the updated dataset using head().}}\label{the-variable-depth-is-measured-in-kilometers.-create-a-new-variable-called-depth_m-that-gives-depth-in-meters-rather-than-kilometers-and-add-it-to-the-dataset-quakes.-to-help-get-you-started-i-have-given-you-code-that-creates-the-new-variable-but-fills-it-with-na-values.-overwrite-the-nas-below-by-writing-code-on-the-right-hand-side-of-the-assignment-operator---that-computes-the-requested-transformation.-print-out-the-first-few-rows-of-the-updated-dataset-using-head.}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# update the code below by replacing the NA with}
+\CommentTok{\# the correct expression to convert to meters}
+\NormalTok{quakes}\SpecialCharTok{$}\NormalTok{depth\_m }\OtherTok{\textless{}{-}} \ConstantTok{NA}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{q5}{%
+\subsection{Q5}\label{q5}}
+
+\hypertarget{lets-make-some-plots-in-base-r.}{%
+\subparagraph{Let's make some plots in base
+R.}\label{lets-make-some-plots-in-base-r.}}
+
+\hypertarget{pt-1}{%
+\subsubsection{5.1 (2 pt)}\label{pt-1}}
+
+\hypertarget{create-a-boxplot-of-depth-using-the-boxplot-function.-describe-where-you-see-the-min-max-and-median-which-you-calculated-in-question-2-in-this-plot.}{%
+\subparagraph{\texorpdfstring{Create a boxplot of \texttt{depth} using
+the \texttt{boxplot()} function. Describe where you see the min, max,
+and median (which you calculated in question 2) in this
+plot.}{Create a boxplot of depth using the boxplot() function. Describe where you see the min, max, and median (which you calculated in question 2) in this plot.}}\label{create-a-boxplot-of-depth-using-the-boxplot-function.-describe-where-you-see-the-min-max-and-median-which-you-calculated-in-question-2-in-this-plot.}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{boxplot}\NormalTok{(quakes}\SpecialCharTok{$}\NormalTok{depth)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics{HW1_files/figure-latex/unnamed-chunk-8-1} \end{center}
+
+The minimum is seen in the lowest horizontal line, while the maximum is
+seen in the highest horizontal line. The median value can be seen in the
+thick bar in the middle of the two quartiles.
+
+\hypertarget{pt-2}{%
+\subsubsection{5.2 (2 pt)}\label{pt-2}}
+
+\hypertarget{create-a-histogram-of-depth-using-the-hist-function.-what-important-information-does-the-histogram-provide-that-the-boxplot-does-not}{%
+\subparagraph{\texorpdfstring{Create a histogram of \texttt{depth} using
+the \texttt{hist()} function. What important information does the
+histogram provide that the boxplot does
+not?}{Create a histogram of depth using the hist() function. What important information does the histogram provide that the boxplot does not?}}\label{create-a-histogram-of-depth-using-the-hist-function.-what-important-information-does-the-histogram-provide-that-the-boxplot-does-not}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{hist}\NormalTok{(quakes}\SpecialCharTok{$}\NormalTok{depth)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics{HW1_files/figure-latex/unnamed-chunk-9-1} \end{center}
+
+The histogram is important in telling us the exact distribution of the
+data, such as the fact that it is bimodal, a feature which is not
+distinguishable from the boxplot.
+
+\hypertarget{pt-3}{%
+\subsubsection{5.3 (2 pt)}\label{pt-3}}
+
+\hypertarget{create-a-scatterplot-by-plotting-variables-mag-and-stations-against-each-other-using-the-plot-function.-note-that-to-generate-a-scatterplot-the-plot-takes-two-arguments-the-x-axis-variable-and-the-y-axis-variable.-describe-the-relationship-between-the-two-variables.}{%
+\subparagraph{\texorpdfstring{Create a scatterplot by plotting variables
+\texttt{mag} and \texttt{stations} against each other using the
+\texttt{plot()} function. Note that to generate a scatterplot, the
+\texttt{plot()} takes two arguments: the x-axis variable and the y-axis
+variable. Describe the relationship between the two
+variables.}{Create a scatterplot by plotting variables mag and stations against each other using the plot() function. Note that to generate a scatterplot, the plot() takes two arguments: the x-axis variable and the y-axis variable. Describe the relationship between the two variables.}}\label{create-a-scatterplot-by-plotting-variables-mag-and-stations-against-each-other-using-the-plot-function.-note-that-to-generate-a-scatterplot-the-plot-takes-two-arguments-the-x-axis-variable-and-the-y-axis-variable.-describe-the-relationship-between-the-two-variables.}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(quakes}\SpecialCharTok{$}\NormalTok{mag, quakes}\SpecialCharTok{$}\NormalTok{stations)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics{HW1_files/figure-latex/unnamed-chunk-10-1} \end{center}
+
+The scatterplot shows that magnitude and station seem to be positively
+correlated.
+
+\hypertarget{pt-4}{%
+\subsubsection{5.4 (3 pt)}\label{pt-4}}
+
+\hypertarget{create-scatterplot-of-the-quakes-geographic-locations-by-plotting-long-on-the-x-axis-and-lat-on-the-y-axis.-using-this-plot-and-the-maplink-below-note-the-two-trenches-and-some-of-the-techniques-you-practiced-above-are-deeper-quakes-more-likely-to-originate-east-or-west-of-fiji}{%
+\subparagraph{\texorpdfstring{Create scatterplot of the quakes'
+geographic locations by plotting \texttt{long} on the x-axis and
+\texttt{lat} on the y-axis. Using this plot, and the map/link below
+(note the two trenches), and some of the techniques you practiced above,
+are deeper quakes more likely to originate east or west of
+Fiji?}{Create scatterplot of the quakes' geographic locations by plotting long on the x-axis and lat on the y-axis. Using this plot, and the map/link below (note the two trenches), and some of the techniques you practiced above, are deeper quakes more likely to originate east or west of Fiji?}}\label{create-scatterplot-of-the-quakes-geographic-locations-by-plotting-long-on-the-x-axis-and-lat-on-the-y-axis.-using-this-plot-and-the-maplink-below-note-the-two-trenches-and-some-of-the-techniques-you-practiced-above-are-deeper-quakes-more-likely-to-originate-east-or-west-of-fiji}}
+
+\includegraphics{http://valorielord.com/default/cache/file/D4256462-E44C-32F4-62C9A3C4AA762918_bodyimage.png}
+\href{https://www.google.com/maps/@-20.1679389,175.7587479,3513560m/data=!3m1!1e3}{Link
+to location on Google maps}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(quakes}\SpecialCharTok{$}\NormalTok{long, quakes}\SpecialCharTok{$}\NormalTok{lat)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics{HW1_files/figure-latex/unnamed-chunk-11-1} \end{center}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{mean}\NormalTok{(quakes[quakes}\SpecialCharTok{$}\NormalTok{long }\SpecialCharTok{\textgreater{}} \FloatTok{178.07}\NormalTok{, ]}\SpecialCharTok{$}\NormalTok{depth)  }\CommentTok{\# east of fiji}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 349.7137
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{mean}\NormalTok{(quakes[quakes}\SpecialCharTok{$}\NormalTok{long }\SpecialCharTok{\textless{}} \FloatTok{178.07}\NormalTok{, ]}\SpecialCharTok{$}\NormalTok{depth)  }\CommentTok{\# west of fiji}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 170.5421
+\end{verbatim}
+
+Deeper quakes are more likely to originate east of Fiji, as the mean
+depth of earthquakes east of Fiji (latitude 178.07) is 349.7 kilometers,
+while that of those west of Fiji is 170.5 kilometers. This also makes
+sense considering the Tonga trench looks significantly deeper than the
+adjacent New Hebrides trench.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{verbatim}
+## R version 4.0.3 (2020-10-10)
+## Platform: x86_64-pc-linux-gnu (64-bit)
+## Running under: Ubuntu 18.04.6 LTS
+## 
+## Matrix products: default
+## BLAS:   /stor/system/opt/R/R-4.0.3/lib/R/lib/libRblas.so
+## LAPACK: /stor/system/opt/R/R-4.0.3/lib/R/lib/libRlapack.so
+## 
+## locale:
+##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## loaded via a namespace (and not attached):
+##  [1] compiler_4.0.3  magrittr_2.0.3  fastmap_1.1.0   cli_3.3.0      
+##  [5] formatR_1.12    tools_4.0.3     htmltools_0.5.3 rstudioapi_0.13
+##  [9] yaml_2.3.5      stringi_1.7.8   rmarkdown_2.14  knitr_1.39     
+## [13] stringr_1.4.0   xfun_0.31       digest_0.6.29   rlang_1.0.4    
+## [17] evaluate_0.15
+\end{verbatim}
+
+\begin{verbatim}
+## [1] "2022-09-02 20:13:15 CDT"
+\end{verbatim}
+
+\begin{verbatim}
+##                                       sysname 
+##                                       "Linux" 
+##                                       release 
+##                          "4.15.0-191-generic" 
+##                                       version 
+## "#202-Ubuntu SMP Thu Aug 4 01:49:29 UTC 2022" 
+##                                      nodename 
+##                  "educcomp01.ccbb.utexas.edu" 
+##                                       machine 
+##                                      "x86_64" 
+##                                         login 
+##                                     "unknown" 
+##                                          user 
+##                                      "fwd229" 
+##                                effective_user 
+##                                      "fwd229"
+\end{verbatim}
+
+\end{document}
