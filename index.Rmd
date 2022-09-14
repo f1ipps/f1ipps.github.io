@@ -6,7 +6,7 @@ output:
     css: "styles.css"
 ---
 
-```{R echo=F, eval=F}
+```{r echo=F, eval=F}
 #to build this website into the _site directory, run
 rmarkdown::site_generator()
 ```
