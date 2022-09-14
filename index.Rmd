@@ -1,6 +1,6 @@
 ---
 title: ' '
-pagetitle: 'Your Name'
+pagetitle: 'Felipe Dantas'
 output: 
   html_document: 
     css: "styles.css"
@@ -11,20 +11,14 @@ output:
 rmarkdown::site_generator()
 ```
  
-<img src="avatar.jpg" style=width:40% class="img-circle">
+<img src="felipe.jpg" style=width:40% class="img-circle">
 
 <br>
 
-# Welcome! I am Bevo XV. 
+# Welcome! My name is Felipe.
   
 </br>
 
-##### I weigh almost one ton and my horns are ~5 feet long from tip to tip.
+##### I like pancakes.
 
-##### I enjoy football and chewing on various grasses. 
-
-##### I do not like the UGA Bulldog and I do not hold any advanced degrees.  
-
-##### I don't have any data-related projects either, but if I did you could find them [here](/portfolio)!
-
----
+##### I also happen to enjoy ice cream.
