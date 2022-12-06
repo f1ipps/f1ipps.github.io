@@ -11,14 +11,12 @@ output:
 rmarkdown::site_generator()
 ```
  
-<img src="felipe.jpg" style=width:40% class="img-circle">
+<img src="pic.png" style=width:80% class="img-rectangle">
 
 <br>
 
-# Welcome! My name is Felipe.
+# Determinants of Happiness in Rural Bangladesh 
   
 </br>
 
-##### I like pancakes.
-
-##### I also happen to enjoy ice cream.
+##### Welcome to our group project. Please use the headers to navigate our study!
