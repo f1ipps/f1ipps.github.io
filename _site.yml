@@ -2,13 +2,13 @@ name: "Felipe Dantas"
 navbar:
   title: "SDS 322e Final Project, Group 12"
   left:
-    - text: "Introduction"
-      href: index.html
-    - text: "Data"
+    - icon: fa-github fa-lg
+      href: https://github.com/clayrcohen/ruralbangladeshhappiness322e
+    - text: "Dataset"
+      href: intro.html
+    - text: "Exploration"
       href: data.html
-    - text: "Modeling"
+    - text: "Modeling & Conclusion"
       href: modeling.html
     - text: "References/Resources"
       href: references.html
-    - icon: fa-github fa-lg
-      href: https://f1ipps.github.io/index.html

@@ -1,6 +1,6 @@
 ---
 title: ' '
-pagetitle: 'Felipe Dantas'
+pagetitle: 'SDS322E'
 output: 
   html_document: 
     css: "styles.css"
