@@ -1,0 +1,39 @@
+---
+title: 'Introduction'
+pagetitle: 'SDS322E'
+output: 
+  html_document: 
+    css: "styles.css"
+---
+
+```{r echo=F, eval=F}
+#to build this website into the _site directory, run
+rmarkdown::site_generator()
+```
+ 
+<br></br>
+
+#### Study Motivation
+- Studies show that happy people function more effectively and help society more
+- What factors veritably influence satisfaction and overall happiness?
+- Is financial stability truly the best measure of happiness?
+- Findings may be relevant to development programs
+
+<br></br>
+
+#### Dataset
+- 2013 Tangail Survey Data
+- 1430 Households Represented
+- Measured income, immigration status, household size, ownership of vehicles/animals/appliances, etc
+- Also measured life satisfaction in various aspects of life such as leisure time and community
+
+<br></br>
+
+#### Data Preparation
+- Assigned proper values to the different kind of NAs and removing the remaining missing data
+- Assigned factor and numeric values 
+- Added the monthly income variables to get total monthly income
+- Used forcats package in order to alter the life satisfaction variables into proper categories from solely being characters
+- Created aggregate measure of happiness (40 point scale) based on 11 satisfaction variables
+- Used aggregate measure to create factored class variables that split the observations into 2 classes, so that we could determine the best predictors via random forest classification
+

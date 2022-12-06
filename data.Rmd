@@ -1,0 +1,36 @@
+---
+title: 'Data'
+pagetitle: 'SDS322E'
+output: 
+  html_document: 
+    css: "styles.css"
+---
+
+```{r echo=F, eval=F}
+#to build this website into the _site directory, run
+rmarkdown::site_generator()
+```
+
+<br></br>
+
+##### <u>Hypothesis 1</u>
+##### Total income has little effect on the happiness of residents in rural Bangladesh.
+<img src="income.png" style=width:70% class="img-rectangle">
+
+<br></br>
+
+##### <u>Hypothesis 2</u>
+##### Age has little effect on happiness in males, but has an effect on female happiness.
+<img src="age.png" style=width:70% class="img-rectangle">
+
+<br></br>
+
+##### <u>Hypothesis 3</u>
+##### Age is the most important variable in determining happiness.
+<img src="rf.png" style=width:70% class="img-rectangle">
+
+<br></br>
+
+##### <u>Hypothesis 4</u>
+##### Employment Status has little effect on happiness regardless of sex.
+<img src="work.png" style=width:70% class="img-rectangle">

@@ -1,0 +1,52 @@
+---
+title: 'Modeling & Conclusion'
+pagetitle: 'SDS322E'
+output: 
+  html_document: 
+    css: "styles.css"
+---
+
+```{r echo=F, eval=F}
+#to build this website into the _site directory, run
+rmarkdown::site_generator()
+```
+
+<br></br>
+
+#### Models used
+- Linear regression
+- Multiple regression
+- Random forest regression
+
+<br></br>
+
+#### Model specifications
+- Response variable = aggregate happiness (sum of 11 different 5-scaled life questions on areas such as family and leisure time)
+- Predictor variable = top eight predictor variables as measured by each variable's mean decrease in gini coefficient (as shown in hypothesis 3)
+  - Except for linear regression which only used age as predictor
+- 80/20 split between training and testing sets
+
+<br></br>
+
+#### Model findings
+- Linear regression MSPE: 25.25 units
+- Multiple regression MSPE: 24.88 units
+- Random forest regression MSPE: 23.57 units
+
+<br></br>
+
+#### Discussion
+- Predictor variables clearly not good predictors - despite trying three different models, all the MSPEs are over half the range of the response variable
+- Possible sources of bias:
+  - 57.6% of original data was omitted due to null values
+  - Measurement bias - survey was very long, respondents may have given inaccurate responses to finish quicker
+  - Social desirability bias - respondents may have overreported happiness
+
+<br></br>
+
+#### Conclusion
+- Different predictor variables will have to be surveyed to provide better prediction of happiness
+- Findings reflect complex and abstract nature of happiness
+- Possible future steps:
+  - Longitudinal study so that inter-person differences in happiness can be normalized
+  - Use friends/family reports of respondents' happiness to counteract social desirability bias

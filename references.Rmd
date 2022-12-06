@@ -1,0 +1,24 @@
+---
+title: 'References/Resources'
+pagetitle: 'SDS322E'
+output: 
+  html_document: 
+    css: "styles.css"
+---
+
+```{r echo=F, eval=F}
+#to build this website into the _site directory, run
+rmarkdown::site_generator()
+```
+ 
+<br></br>
+
+#### Original Dataset
+- Bhuiyan, M., & Szulga, R. (2021). The Tangail Survey: Household Level Census of Subjective Well-Being, Perceptions of Relative Economic Position, and International Migration: 2013 [Tangail, Bangladesh]. Ann Arbor, MI: Inter-university Consortium for Political and Social Research. [https://doi.org/10.3886/E100177V5](https://doi.org/10.3886/E100177V5)
+
+<br></br>
+
+#### Studies that Reference this Dataset
+- Bhuiyan, Muhammad F., and Paula Lackie. “Mitigating Survey Fraud and Human Error: Lessons Learned from A Low Budget Village Census in Bangladesh.” IASSIST Quarterly 40, no. 3 (July 8, 2017): 20. [https://doi.org/10.29173/iq398](https://doi.org/10.29173/iq398).
+- Bhuiyan, Muhammad Faress, and Artjoms Ivlevs. “Micro-Entrepreneurship and Subjective Well-Being: Evidence from Rural Bangladesh.” Journal of Business Venturing 34, no. 4 (July 2019): 625–45. [https://doi.org/10.1016/j.jbusvent.2018.09.005](https://doi.org/10.1016/j.jbusvent.2018.09.005).
+- Bhuiyan, Muhammad Faress. “Life Satisfaction and Economic Position Relative to Neighbors: Perceptions Versus Reality.” Journal of Happiness Studies 19, no. 7 (October 2018): 1935–64. [https://doi.org/10.1007/s10902-017-9904-8](https://doi.org/10.1007/s10902-017-9904-8).
