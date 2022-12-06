@@ -11,12 +11,18 @@ output:
 rmarkdown::site_generator()
 ```
  
-<img src="pic.png" style=width:80% class="img-rectangle">
+<img src="pic.png" style=width:60% class="img-rectangle">
 
 <br>
 
 # Determinants of Happiness in Rural Bangladesh 
+##### Ahmed Mumin, John Brown, Vincent Chen, Clay Cohen, Felipe Dantas
+##### The University of Texas at Austin
+##### December 6, 2022
+
+
   
-</br>
+<br>
+
 
 ##### Welcome to our group project. Please use the headers to navigate our study!
